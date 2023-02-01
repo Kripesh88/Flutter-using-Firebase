@@ -13,6 +13,14 @@ class SignUp extends StatelessWidget {
             email: _email.text,
             password: _password.text,
         );
+    }
+    on FirebaseAuthException catch(e){
+      if(e.code== 'weak-password'){
+        print("The password provided is too weak");
+      } else if(e.code=='email-already-in-use'){
+        print("The account already exist for that email");
+      }
+
     }catch(e){
       print(e);
     }
@@ -75,6 +83,13 @@ class SignUp extends StatelessWidget {
                   hintText: "Password",
 
                 ),
+                validator: (value){
+                  if(value!.length<6){
+                    return 'please enter password of minimum length of 6';
+                  }else{
+                    return null;
+                  }
+                },
                 controller: _password,
               ),
               decoration: BoxDecoration(

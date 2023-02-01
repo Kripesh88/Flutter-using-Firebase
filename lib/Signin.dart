@@ -1,6 +1,7 @@
 
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:signup_application/homepage.dart';
 
@@ -9,18 +10,28 @@ class SignIn extends StatelessWidget {
   TextEditingController _email = new TextEditingController();
   TextEditingController _password = new TextEditingController();
 
-  Future<void> signin(BuildContext context) async{
+  Future<User?> signin(BuildContext context) async{
+
     try{
+
       UserCredential userCredential= await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: _email.text,
           password: _password.text,
+
+
       );
+
+
     }
+
     catch(e){
       print(e);
     }
     print("SignIn successful !!");
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> MainPage()));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context)=> MainPage()));
   }
 
 
@@ -50,11 +61,13 @@ class SignIn extends StatelessWidget {
               color: Colors.cyan,
               borderRadius: BorderRadiusDirectional.circular(20),
 
+
             ),
           ),
           Container(
 
             padding: EdgeInsets.all(10),
+
             child: TextFormField(
               obscureText: true,
               decoration: InputDecoration(
@@ -63,6 +76,13 @@ class SignIn extends StatelessWidget {
                 hintText: "Password",
 
               ),
+              validator: (value){
+                if(value!.length<6){
+                  return 'please enter password of minimum length of 6';
+                }else{
+                  return null;
+                }
+              },
               controller: _password,
             ),
             decoration: BoxDecoration(
