@@ -42,7 +42,7 @@ class SignUp extends StatelessWidget {
            child: TextFormField(
              decoration: InputDecoration(
                icon: Icon(Icons.person_pin),
-               labelText: "Enter Username: ",
+               labelText: "Enter your Username: ",
                hintText: "UserName",
 
              ),
@@ -60,7 +60,7 @@ class SignUp extends StatelessWidget {
               child: TextFormField(
                 decoration: InputDecoration(
                   icon: Icon(Icons.email),
-                  labelText: "Enter Your Email: ",
+                  labelText: "Enter Email: ",
                   hintText: "Email",
 
                 ),
@@ -79,7 +79,7 @@ class SignUp extends StatelessWidget {
                 obscureText: true,
                 decoration: InputDecoration(
                   icon: Icon(Icons.password_rounded),
-                  labelText: "Enter Password: ",
+                  labelText: "Enter your Password: ",
                   hintText: "Password",
 
                 ),

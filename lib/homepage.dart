@@ -21,6 +21,7 @@ class MainPage extends StatelessWidget {
     child: Column(
   children: [
     Image.network('https://i.pinimg.com/736x/2d/7f/68/2d7f68518a4f6372ec052a91e81e7a9b.jpg'),
+
     ],
 
 
