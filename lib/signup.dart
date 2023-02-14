@@ -84,8 +84,8 @@ class SignUp extends StatelessWidget {
 
                 ),
                 validator: (value){
-                  if(value!.length<6){
-                    return 'please enter password of minimum length of 6';
+                  if(value!.length<7){
+                    return 'please enter password of minimum length of 7';
                   }else{
                     return null;
                   }
