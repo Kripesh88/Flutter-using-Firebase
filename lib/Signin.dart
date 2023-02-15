@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:signup_application/homepage.dart';
+import 'package:signup_application/main.dart';
 
 class SignIn extends StatelessWidget {
 
@@ -103,7 +104,7 @@ class SignIn extends StatelessWidget {
                 fontSize: 20,
               ),),
               onPressed: (){
-                signin(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MainPage()));;
               },
             ),
             decoration: BoxDecoration(
