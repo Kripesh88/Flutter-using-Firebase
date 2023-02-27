@@ -73,13 +73,13 @@ class SignIn extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 icon: Icon(Icons.password_rounded),
-                labelText: "Enter Password: ",
+                labelText: "Enter your Password: ",
                 hintText: "Password",
 
               ),
               validator: (value){
                 if(value!.length<6){
-                  return 'please enter password of minimum length of 6';
+                  return 'Please Enter Password Of Minimum Length Of 6';
                 }else{
                   return null;
                 }
