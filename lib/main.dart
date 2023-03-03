@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("SignUp using FireBase"),
+        title: Text("Signup using FireBase"),
       ),
       body: Container(
 

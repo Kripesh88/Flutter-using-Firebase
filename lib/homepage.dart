@@ -13,7 +13,7 @@ class MainPage extends StatelessWidget {
 
         appBar: AppBar(
           backgroundColor: Colors.red,
-        title: Text("Welcome to your New Account."),
+        title: Text("Welcome to Your New Account."),
     ),
     body: Container(
 

@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 class SignUp extends StatelessWidget {
 
   TextEditingController _email= new TextEditingController();
-  TextEditingController _password= new TextEditingController();
+  TextEditingController _password= new TextEditingController( );
   TextEditingController _username= new TextEditingController();
 
   Future<void> signup() async{
